@@ -315,7 +315,8 @@ def returning_to_the_spaceship():
             time.sleep(3)
             print("You hit him! He's dead!")
             time.sleep(1)
-            print("You can now take his body to earth, that's a great discovery!")
+            print("You can now take his body to earth," + 
+            "that's a great discovery!")
             time.sleep(2)
             print("You might return to the spaceship now!")
             time.sleep(4)
@@ -324,7 +325,105 @@ def returning_to_the_spaceship():
         else:
             print("Wrong input. Please choose what you will do 'kill' or 'hide'!")
             continue
-        
+
+def back_to_earth():
+    """
+    This function will take the user back to earth, he will be exposed to one of his last challenges
+    before ending the game.
+    """
+    print("Looks like the spaceship has been damaged when you shut the alien!")
+    while True:
+        spaceship_repair = input("What will you do? Do you consider repairing the spaceship? " +
+        "Or your experience is telling you that you can fly like that? (repair/fly)")
+        if spaceship_repair == "fly":
+            print("Your instincts are strong, you can do it!")
+            time.sleep(3)
+            danger = "DANGER! DANGER!\n"
+            for character in danger:
+                sys.stdout.write(character)
+                sys.stdout.flush()
+                time.sleep(0.2)
+            time.sleep(2)
+            print("The ship has serios damage!")
+            mayday = "Mayday! Mayday! Mayday"
+            for character in mayday:
+                sys.stdout.write(character)
+                sys.stdout.flush()
+                time.sleep(0.2)
+            print("GAME OVER!\n")
+            play_again()
+            break
+        elif spaceship_repair == "repair":
+            print("That's a good coice!")
+            repair = "REPAIRING ..."
+            for character in repair:
+                sys.stdout.write(character)
+                sys.stdout.flush()
+                time.sleep(0.2)
+            time.sleep(2)
+            print("The repairs are ready! You can now return home!")
+            break
+        else:
+            print("Wrong input! Please choose 'repair' or 'fly'!")
+            continue
+
+def home_sweet_home():
+    """
+    The storyline will continue and congratulate the astronaute for the
+    successfully mision.
+    """
+    print("Well done " + {name} + ", you have successfully return home!")
+    time.sleep(2)
+    print("Welcome back, " + {name} + "!")
+    time.sleep(1)
+    print("The alien that you have brought back from the moon has been taken" +
+    "by the sciencists from Area 51! You are a hero!")
+    time.sleep(2)
+    print("You have won the game! You are ready to be a real astronaute!")
+    print("Winner winner chicken dinner!")
+    while True:
+        next_move = input("\n What will you do next, " + {name} + "? (leave\PlayAgain")
+        if next_move == "leave":
+            print("Thank you for playing my game! Good bye, " + {name} + "!")
+            break
+        elif next_move == "PlayAgain":
+            print("That's a good choice, more training before the real thing!")
+            play_again()
+        else:
+            print("Please input a correct choice! (leave/PlayAgain")
+            continue
+
+#restart game
+
+def play_again():
+    """
+    This function will be called everytime when the user will die in the 
+    challenges if not a good bye message will be displayed. If yes, a play_game function is
+    called again.
+    """
+    while True:
+        play_again = input("You can't die now! Try again? (yes/no):\n")
+        if play_again == "yes":
+            global alien_gun
+            alien_gun = "no"
+            introdaction()
+            break
+        elif play_again == "no":
+            print("\n That's not what we expected... Thank you for playing!\n")
+            break
+        else:
+            print("Wrong input. Please type 'yes' or 'no'.")
+            continue
+
+
+introdaction()
+
+
+
+
+
+            
+
 
 
             
