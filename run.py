@@ -125,10 +125,11 @@ def get_username():
             print("Game over!\n")
             play_again()
             break
-        else landing == "yes":
-        print("You have successfully fallowed the landing procedures!")
-        continue
-
+        elif landing == "yes":
+            print("You have successfully fallowed the landing procedures!")
+        else:
+            print("Wrong input. Please type 'yes' or 'no'.")
+            continue
     landing_string = "Landing ...\n"
     for character in landing_string:
         sys.stdout.write(character)
@@ -138,6 +139,82 @@ def get_username():
     print("You have successfully landed on the moon!")
     print("Well done," + {name} + ", you arrived on the moon " 
     "be ready to take your first steps on the moon!")
-    
+    time.sleep(3)
+    print("The crew has set the life support resources, " +
+    {name} + ", you can step on the moon now!" + 
+    "Keep in mind that you have 100% oxigen in your tank, this will last" +
+    "aproximative one hour.")
+    time.sleep(2)
+    print("Don't forget to return to the base once you running low.")
 
-    
+
+#take the gun, or not 
+def choice_two():
+    """
+    The game will request from the user to choose if he will pick
+    the gun wich will help later. Or not.
+    """
+    print("Your research is going well, unexpected you have seen something" +
+    "you are not sure what it is, looks like it's covered in dust.")
+    time.sleep(2)
+    print("Hmm.. let's see what it is....")
+    time.sleep(2)
+    it_is_a_gun = "IT'S A GUN! It's something that you never seen before."
+    for character in it_is_a_gun:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.1)
+    time.sleep(1)
+    print("You think it's an alien gun, what will you do?")
+    while True:
+        global alien_gun
+        alien_gun = input("Do you take the gun? (yes/no):\n")
+        if alien_gun == "yes":
+            print("\nYou have pick the gun. Who knows when you will need it.")
+            break
+        elif alien_gun == "no":
+            print("\nWhat you don't own, you don't take." +
+            "let's hope you won't regret that later.")
+            break
+        else:
+            print("That's not quite right, please type 'yes' or 'no'.")
+            continue
+    time.sleep(2)
+    print("What is that? Is that an ...")
+    alien = "ALIEN!!!\n"
+    for character in alien:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.1)
+    time.sleep(1)
+    print("He has saw you!!!")
+    while True:
+        choice_three = input("What will you do? (stay/hide/run)")
+        if choice_three == "stay":
+            print("\nYou don't know how to use the gun yet.")
+            time.sleep(2)
+            print("The alien is running towords you, he is atacking you!")
+            time.sleep(3)
+            print("GAME OVER!\n")
+            play_again()
+            break
+        elif choice_three == "run":
+            print("The alien it's just behind you.")
+            time.sleep(2)
+            print("HE COUGHT YOU!!!!")
+            time.sleep(2)
+            print("GAME OVER!\n")
+            play_again()
+            break
+        elif choice_three == "hide":
+            print("I think the alien has lost you...")
+            time.sleep(2)
+            print("Looks like he lost you. Stay down.")
+            break
+        else:
+            print("Wrong input. Please choose 'stay', 'hide' or 'run'")
+            continue
+
+
+
+
