@@ -215,6 +215,121 @@ def choice_two():
             print("Wrong input. Please choose 'stay', 'hide' or 'run'")
             continue
 
+def crew_assist():
+    """
+    The game continues where the user will be expose to new challenges
+    and he will be requested to choose diferent what he will do next
+    """
+    oxigen_tank = "The oxigen tank is down to 50%."
+    for character in oxigen_tank:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.2)
+    while True:
+        choose_your_next_move = input("What you will do? (return/continue)")
+        if choose_your_next_move == "return":
+            print("You are now returning to the spaceship!")
+            time.sleep(2)
+            print("You heard a cracking. What is happening?")
+            time.sleep(1)
+            print("You your oxigen is running out!")
+            time.sleep(1)
+            print("Something has broken your suit. " + 
+            "You start loosing your constience")
+            time.sleep(3)
+            print("GAME OVER!\n")
+            play_again()
+            break
+        elif choose_your_next_move == "continue":
+            print("You have alerted the crew, someone will bring you supplies.")
+            break
+        else:
+            print("Wrong input. Please choose 'return' or 'continuee'.")
+            continue
+
+def do_research():
+    """
+    While continue to collect the probes from the moon the user will 
+    continue meting challanges and will be exposed to the moons 
+    unknown dangers.
+    """
+    print("While continue researching, you noticed that you are running low " +
+    "on the oxigen tanks. 25% it's what you see on the watch." )
+    time.sleep(2)
+    radio_string = "RADIO: Crew member: Chhh chhh ... he hit me!\n"
+    for character in radio_string:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.3)
+    time.sleep(2)
+    print("Your team member has been killed by an alien...")
+    while True:
+        choice_four = input({name} + ", what do you do next? (return/continue)")
+        if choice_four == "return":
+            print("You have just 25% oxigen left, you have to move fast!")
+            break
+        elif choice_four == "continue":
+            print("You are brave! Continuuing researching is imporatnt for you!")
+            time.sleep(2)
+            research = "RESERCHING ..."
+            for character in research:
+                sys.stdout.write(character)
+                sys.stdout.flush()
+                time.sleep(0.2)
+            time.sleep(2)
+            print("You have just 2% oxigen left, you start seeing unclear..")
+            time.sleep(3)
+            print("GAME OVER!\n")
+            play_again()
+        else:
+            print("That's not quite right! Please choose 'return' or 'continue'.")
+            continue
+
+def returning_to_the_spaceship():
+    """
+    The user will be supposed to the last challenges of the game and he will
+    return home on earth.
+    """
+    print("You are on your way back to the spaceship, the supplies are enough " +
+    "for you to return to safety.")
+    time.sleep(3)
+    print("What is that?")
+    time.sleep(1)
+    print("It's the alien! He didn't seen you this time, now it's your chance!")
+    time.sleep(0.5)
+    while True:
+        your_chance = input({name} + ", don't be scared! What do you do?" +
+        "kill the alien with the gun or hide until he will leave? (kill/hide)")
+        if your_chance == "hide":
+            print("That's a good choice, choosing safety is fine.")
+            time.sleep(2)
+            print("The alien sees you!")
+            time.sleep(2)
+            print("He is running toword you pointing his gun at you!")
+            time.sleep(3)
+            print("GAME OVER!\n")
+            play_again()
+            break
+        elif your_chance == "kill":
+            print("The alien hasan't seen you! Now is your chance " + {name} + "shut!")
+            time.sleep(3)
+            print("You hit him! He's dead!")
+            time.sleep(1)
+            print("You can now take his body to earth, that's a great discovery!")
+            time.sleep(2)
+            print("You might return to the spaceship now!")
+            time.sleep(4)
+            print("You have prepared the ship, you are ready to lunch!")
+            break
+        else:
+            print("Wrong input. Please choose what you will do 'kill' or 'hide'!")
+            continue
+        
+
+
+            
+
+
 
 
 
