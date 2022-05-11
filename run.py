@@ -7,7 +7,7 @@ import time
 global alien_gun
 alien_gun = "no"
 global name
-name = "input()"
+name = input()
 
 
 def introdaction():
@@ -468,9 +468,9 @@ def home_sweet_home():
     The storyline will continue and congratulate the astronaute for the
     successfully mision.
     """
-    print(f'Well done {name}, you have successfully return home!')
+    print("Well done, you have successfully return home!")
     time.sleep(2)
-    print(f'Welcome back, {name} !')
+    print("Welcome back to earth!")
     time.sleep(1)
     print("The alien that you have brought back from the moon has been taken" +
           "by the sciencists from Area 51! You are a hero!")
@@ -478,17 +478,17 @@ def home_sweet_home():
     print("You have won the game! You are ready to be a real astronaute!")
     print("Winner winner chicken dinner!")
     while True:
-        next_move = input(f'\nWhat will you do next, {name}?' +
-                          ' (leave/PlayAgain)').lower()
+        next_move = input("\nWhat will you do next?" +
+                          "(leave/playagain)").lower()
         if next_move == "leave":
-            print(f'Thank you for playing my game! Good bye, {name} !')
+            print("Thank you for playing my game! Good bye!")
             break
         elif next_move == "PlayAgain":
             print("That's a good choice, more training before the real thing!")
             play_again()
             break
         else:
-            print("Please input a correct choice! (leave/PlayAgain")
+            print("Please input a correct choice! (Leave/PlayAgain")
             continue
 
 
