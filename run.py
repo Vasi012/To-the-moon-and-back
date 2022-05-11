@@ -6,77 +6,102 @@ import time
 
 global alien_gun
 alien_gun = "no"
+global name
+name = "input()"
 
 
 def introdaction():
     """
     Display the story line, title and introduce the user into the game.
     """
-    print("All the strugle and the years past, it all been a success.")
+    print("All the strugle and the years past, it all been a success. ")
     print("All for achieving the dream of my life.")
-    time.sleep(3)
-    print("Moom, Dad, I will be an astronaute! I will explore the\n" +
+    time.sleep(1)
+    print("\nMoom, Dad, I will be an astronaute! I will explore the " +
           "universe and I will see the galaxy!")
     time.sleep(2)
-    print("It's my time, I need to go, I have a long way ahead\n" +
+    print("\nIt's my time, I need to go, I have a long way ahead " +
           "all the training, and knowledge. Good bye Mom, Dad!")
     time.sleep(1)
-    print("Vruum, on my way to the space, as Neil Armstrong said" +
-          "\"That's one small step for man, one giant leap for mankind.\"")
+    print("Vruum, on my way to the space, as Neil Armstrong said: " +
+          "\n\"That's one small step for man, one giant leap for mankind.\"")
     time.sleep(1)
-    print("Woow... looks exactly as how I've been dreaming about it")
+    print("Woow... looks exactly as how I've been dreaming about it! ")
     time.sleep(2)
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@        @@       @@@@@@@@@@@        @@  @@@  @@       @@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@  @@@@@  @@@  @@@@@@@@@@@@@@  @@@@@  @@@  @@  @@@@@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@  @@@@@  @@@  @@@@@@@@@@@@@@  @@@@@       @@     @@@@@"
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@  @@@@@  @@@  @@@@@@@@@@@@@@  @@@@@  @@@  @@  @@@@@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@  @@@@@       @@@@@@@@@@@@@@  @@@@@  @@@  @@       @@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@    @@@@@    @@         @@@         @@    @@@@  @@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@  @  @@@  @  @@  @@@@@  @@@  @@@@@  @@  @  @@@  @@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@  @@  @  @@  @@  @@@@@  @@@  @@@@@  @@  @@  @@  @@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@  @@@  @@@@  @@  @@@@@  @@@  @@@@@  @@  @@@  @  @@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@  @@@@@@@@@  @@         @@@         @@  @@@@    @@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@")
+    time.sleep(0.3)
     print("@@        @    @@@@@  @    @@@@@@@@@      @@@        @        @  " +
           "@@@   @")
+    time.sleep(0.3)
     print("@@  @@@@  @  @  @@@@  @  @  @@@@@@@@  @@@@  @  @@@@  @  @@@@  @  " +
           "@@  @@@")
+    time.sleep(0.3)
     print("@@  @@@@  @  @@  @@@  @  @@  @@@@@@@  @@@@  @  @@@@  @  @@@@@@@  " +
           "  @@@@@")
+    time.sleep(0.3)
     print("@@        @  @@@  @@  @  @@@  @@@@@@     @@@@        @  @@@@@@@  " +
           "  @@@@@")
+    time.sleep(0.3)
     print("@@  @@@@  @  @@@@  @  @  @@@@  @@@@@  @@@@  @  @@@@  @  @@@@@@@  " +
           "@  @@@@")
+    time.sleep(0.3)
     print("@@  @@@@  @  @@@@@    @  @@@@@  @@@@  @@@@  @  @@@@  @  @@@@  @  " +
           "@@  @@@")
+    time.sleep(0.3)
     print("@@  @@@@  @  @@@@@@   @         @@@@      @@@  @@@@  @        @  " +
           "@@@   @")
+    time.sleep(0.3)
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@\n\n")
-    time.sleep(2)
+    time.sleep(0.3)
+    time.sleep(1)
     print("Starting to acomodate, the training looks easy, everything seems " +
           "amazing, but you cannot wait for the first lunch, for the first " +
           "trip for .... the moon!")
-    time.sleep(3)
+    time.sleep(2)
     start_game()
 
 
@@ -88,22 +113,22 @@ def start_game():
     a corect input.
     """
     while True:
-        to_the_moon = input("The Cheif has requested you to join a jurney " +
+        to_the_moon = input("\nThe Cheif has requested you to join a jurney " +
                             "to the moon! Are you ready for " +
-                            "the lifetime jurney?! (yes/no):\n")
+                            "the lifetime jurney?! (yes/no): ").lower()
         if to_the_moon == "no":
-            print("\n This was one and only offer...")
+            print("\n This was one and the only offer...")
             time.sleep(2)
             print("But, It's your choice... Good luck!")
             time.sleep(3)
-            print("Game over!\n")
+            print("\nGame over!")
             play_again()
             break
         elif to_the_moon == "yes":
             get_username()
             break
         else:
-            print("Ooops... you can type just 'yes' or 'no', try again.")
+            print("\nOoops... you can type just 'yes' or 'no', try again.")
             continue
 
 
@@ -113,40 +138,40 @@ def get_username():
     If no input, the user will be asked again to input his username.
     """
     print("\nGreat! You made a life decision!")
-    time.sleep(2)
+    time.sleep(1)
     print("We are proud to have you here today! Your name will be " +
           "in all the newspapers!")
     while True:
-        name = input("What is your name, young astronaute? (type name):\n")
+        name = input("\nWhat is your name, young astronaute? " +
+                     "(type name):").lower()
         if name == "":
             print("This doesn't look like your name, try again.")
             continue
         else:
-            print("What a great name!" +
-                  "Welcome to your life trip, " + {name} + "!")
+            print(f'What a great name! Welcome to your life trip, {name} !')
             break
-    print("Everything is ready, prepare for lunch!")
+    print("\nEverything is ready, prepare for lunch!")
     time.sleep(1)
     print("3")
-    time.sleep(0.5)
+    time.sleep(0.2)
     print("2")
-    time.sleep(0.5)
+    time.sleep(0.2)
     print("1")
-    time.sleep(0.5)
+    time.sleep(0.2)
     print("Go!")
-    time.sleep(0.5)
-    print("The lunch has been successfully, " + {name} + "," +
-          "soon you will land on the moon!")
+    time.sleep(0.2)
+    print(f'The lunch has been successfully, {name},' +
+          'soon you will land on the moon!')
     time.sleep(3)
     print("Prepare to land!")
     while True:
         landing = input("Prepare to land, be carefoul to fallow the " +
                         "landing procedures as you have been trained." +
                         "Have you fallow the landing procedures?" +
-                        " (yes/no):")
+                        " (yes/no):").lower()
         if landing == "no":
             print("\n Danger! Danger! Danger!")
-            time.sleep(2)
+            time.sleep(1)
             print("You have crashed!")
             time.sleep(3)
             print("Game over!\n")
@@ -154,14 +179,15 @@ def get_username():
             break
         elif landing == "yes":
             print("You have successfully fallowed the landing procedures!")
+            break
         else:
             print("Wrong input. Please type 'yes' or 'no'.")
             continue
-    landing_string = "Landing ...\n"
+    landing_string = "\nLanding ..."
     for character in landing_string:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.2)
+        time.sleep(0.1)
     time.sleep(2)
     print("You have successfully landed on the moon!")
     print("Well done," + {name} + ", you arrived on the moon "
@@ -181,21 +207,22 @@ def choice_two():
     The game will request from the user to choose if he will pick
     the gun wich will help later. Or not.
     """
-    print("Your research is going well, unexpected you have seen something" +
-          "you are not sure what it is, looks like it's covered in dust.")
-    time.sleep(2)
+    print("\nYour research is going well, unexpected you have seen " +
+          "something you are not sure what it is, " +
+          "looks like it's covered in dust.")
+    time.sleep(1)
     print("Hmm.. let's see what it is....")
-    time.sleep(2)
+    time.sleep(1)
     it_is_a_gun = "IT'S A GUN! It's something that you never seen before."
     for character in it_is_a_gun:
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.1)
     time.sleep(1)
-    print("You think it's an alien gun, what will you do?")
+    print("\nYou think it's an alien gun, what will you do?")
     while True:
         global alien_gun
-        alien_gun = input("Do you take the gun? (yes/no):\n")
+        alien_gun = input("Do you take the gun? (yes/no): ").lower()
         if alien_gun == "yes":
             print("\nYou have pick the gun. Who knows when you will need it.")
             break
@@ -208,7 +235,7 @@ def choice_two():
             continue
     time.sleep(2)
     print("What is that? Is that an ...")
-    alien = "ALIEN!!!\n"
+    alien = "ALIEN!!!"
     for character in alien:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -216,7 +243,7 @@ def choice_two():
     time.sleep(1)
     print("He has saw you!!!")
     while True:
-        choice_three = input("What will you do? (stay/hide/run)")
+        choice_three = input("What will you do? (stay/hide/run)").lower()
         if choice_three == "stay":
             print("\nYou don't know how to use the gun yet.")
             time.sleep(2)
@@ -254,7 +281,8 @@ def crew_assist():
         sys.stdout.flush()
         time.sleep(0.2)
     while True:
-        choose_your_next_move = input("What you will do? (return/continue)")
+        choose_your_next_move = input("What you will do? " +
+                                      "(return/continue)").lower()
         if choose_your_next_move == "return":
             print("You are now returning to the spaceship!")
             time.sleep(2)
@@ -295,7 +323,7 @@ def do_research():
     print("Your team member has been killed by an alien...")
     while True:
         choice_four = input("What do you do next?" +
-                            "(return/continue)")
+                            "(return/continue)").lower()
         if choice_four == "return":
             print("You have just 25% oxigen left, you have to move fast!")
             break
@@ -332,37 +360,48 @@ def returning_to_the_spaceship():
     print("It's the alien! He didn't seen you this " +
           "time, now it's your chance!")
     time.sleep(0.5)
+    print(f'Do not be scared, {name}!')
+    print("Choose one of the below option.")
+    print("\n1. Hide yourself wishing that he won't see you.")
+    print("\n2. Kill the alien, and take his body with you to the spaceship")
+    if alien_gun == "yes":
+        alien_text = "(1 or 2)"
+    else:
+        alien_text = "Please choose the option 1 or 2."
     while True:
-        your_chance = input("Don't be scared, " + {name} +
-                            "! What do you do next?" +
-                            "kill the alien with the gun or hide " +
-                            "until he will leave? (kill/hide)")
-        if your_chance == "hide":
-            print("That's a good choice, choosing safety is fine.")
-            time.sleep(2)
-            print("The alien sees you!")
-            time.sleep(2)
-            print("He is running toword you pointing his gun at you!")
-            time.sleep(3)
-            print("GAME OVER!\n")
-            play_again()
-            break
-        elif your_chance == "kill":
-            print("The alien hasan't seen you! Now is your " +
-                  "chance " + {name} + "shut!")
-            time.sleep(3)
-            print("You hit him! He's dead!")
-            time.sleep(1)
-            print("You can now take his body to earth," +
-                  "that's a great discovery!")
-            time.sleep(2)
-            print("You might return to the spaceship now!")
-            time.sleep(4)
-            print("You have prepared the ship, you are ready to lunch!")
-            break
-        else:
-            print("Wrong input. Please choose " +
-                  "what you will do 'kill' or 'hide'!")
+        try:
+            your_chance = int(input('What do you do next?' +
+                                    'ill the alien with the gun ' +
+                                    'or hide until he will' + 
+                                    f'leave? {alien_text}:'))
+            if your_chance == 1:
+                print("That's a good choice, choosing safety is fine.")
+                time.sleep(2)
+                print("The alien sees you!")
+                time.sleep(2)
+                print("He is running toword you pointing his gun at you!")
+                time.sleep(3)
+                print("\nGAME OVER!")
+                play_again()
+                break
+            elif your_chance == 2:
+                print('The alien hasan\'t seen you! Now is your ' +
+                      f'chance {name} shut!')
+                time.sleep(3)
+                print("You hit him! He's dead!")
+                time.sleep(1)
+                print("You can now take his body to earth," +
+                      "that's a great discovery!")
+                time.sleep(2)
+                print("You might return to the spaceship now!")
+                time.sleep(4)
+                print("You have prepared the ship, you are ready to lunch!")
+                break
+            else:
+                print(f"Wrong number. Please type {alien_text}.")
+                continue
+        except ValueError:
+            print(f"Wrong Input. Please type in a number {alien_text}.")
             continue
 
 
@@ -376,7 +415,7 @@ def back_to_earth():
         spaceship_repair = input("What will you do? Do you consider " +
                                  "repairing the spaceship? " +
                                  "Or your experience is telling you that " +
-                                 "you can fly like that? (repair/fly)")
+                                 "you can fly like that? (repair/fly)").lower()
         if spaceship_repair == "fly":
             print("Your instincts are strong, you can do it!")
             time.sleep(3)
@@ -415,9 +454,9 @@ def home_sweet_home():
     The storyline will continue and congratulate the astronaute for the
     successfully mision.
     """
-    print("Well done " + {name} + ", you have successfully return home!")
+    print(f'Well done {name}, you have successfully return home!')
     time.sleep(2)
-    print("Welcome back, " + {name} + "!")
+    print(f'Welcome back, {name} !')
     time.sleep(1)
     print("The alien that you have brought back from the moon has been taken" +
           "by the sciencists from Area 51! You are a hero!")
@@ -425,14 +464,15 @@ def home_sweet_home():
     print("You have won the game! You are ready to be a real astronaute!")
     print("Winner winner chicken dinner!")
     while True:
-        next_move = input("\n What will you do next, " + {name} +
-                          "? (leave\PlayAgain")
+        next_move = input(f'\n What will you do next, {name}?' +
+                          ' (leave/PlayAgain)').lower()
         if next_move == "leave":
-            print("Thank you for playing my game! Good bye, " + {name} + "!")
+            print(f'Thank you for playing my game! Good bye, {name} !')
             break
         elif next_move == "PlayAgain":
             print("That's a good choice, more training before the real thing!")
             play_again()
+            break
         else:
             print("Please input a correct choice! (leave/PlayAgain")
             continue
@@ -446,14 +486,12 @@ def play_again():
     a play_game function is called again.
     """
     while True:
-        play_again = input("You can't die now! Try again? (yes/no):\n")
-        if play_again == "yes":
-            global alien_gun
-            alien_gun = "no"
+        rplay_again = input("You can't die now! Try again? (yes/no):").lower()
+        if rplay_again == "yes":
             introdaction()
             break
-        elif play_again == "no":
-            print("\n That's not what we expected... Thank you for playing!\n")
+        elif rplay_again == "no":
+            print("\n That's not what we expected... Thank you for playing!")
             break
         else:
             print("Wrong input. Please type 'yes' or 'no'.")
