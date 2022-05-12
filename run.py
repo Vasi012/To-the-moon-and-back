@@ -1,6 +1,6 @@
 import sys
 import time
-from colorama import init, Fore, Back, Style
+from colorama import init, Fore
 init(autoreset=True)
 
 # Global Variables
@@ -13,8 +13,8 @@ def introduction():
     """
     Display the story line, title, and introduce the user into the game.
     """
-    print(Fore.RED + "All the struggle and the past years, it all " +
-                     "been a success. ")
+    print("All the struggle and the past years, it all " +
+          "been a success. ")
     print("All for achieving the dream of my life.")
     time.sleep(1)
     print("\nMom, Dad, I will be an astronaut! I will explore the " +
@@ -28,7 +28,7 @@ def introduction():
     time.sleep(1)
     print("Wow... looks exactly as I've been dreaming about it! ")
     time.sleep(2)
-    print(Fore.BLUE + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
+    print(Fore.CYAN + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@@@@@@@@@@@@@@@@@@@@")
     time.sleep(0.1)
     print(Fore.BLUE + "@@@@@@@@        @@       @@@@@@@@@@" +
@@ -94,7 +94,7 @@ def introduction():
     print(Fore.BLUE + "@@  @@@@  @  @@@@@@   @         @@@@      @@@  @" +
           "@@@  @        @  @@@   @")
     time.sleep(0.1)
-    print(Fore.BLUE + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
+    print(Fore.CYAN + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@@@@@@@@@@@@@@@@@\n\n")
     time.sleep(0.1)
     time.sleep(1)
@@ -121,7 +121,7 @@ def start_game():
             time.sleep(2)
             print("But, It's your choice... Good luck!")
             time.sleep(3)
-            print("\nGame over!")
+            print(Fore.RED + "\nGame over!")
             play_again()
             break
         elif to_the_moon == "yes":
@@ -170,18 +170,18 @@ def get_username():
                         "\nHave you followed the landing procedures?" +
                         " (yes/no):").lower()
         if landing == "no":
-            print("\nDanger! Danger! Danger!")
+            print(Fore.RED + "\nDanger! Danger! Danger!")
             time.sleep(1)
-            print("\nDanger! Danger! Danger!")
+            print(Fore.RED + "\nDanger! Danger! Danger!")
             time.sleep(1)
             print("You have crashed!")
             time.sleep(2)
-            print("Game over!\n")
+            print(Fore.RED + "Game over!\n")
             play_again()
             break
         elif landing == "yes":
             print("You have successfully followed the landing procedures!")
-            landing_string = "\nLanding ..."
+            landing_string = Fore.YELLOW + "\nLanding ..."
             for character in landing_string:
                 sys.stdout.write(character)
                 sys.stdout.flush()
@@ -239,7 +239,7 @@ def choice_two():
             time.sleep(0.5)
             print("HE COUGHT YOU!!!!")
             time.sleep(0.5)
-            print("GAME OVER!\n")
+            print(Fore.RED + "GAME OVER!\n")
             play_again()
             break
         else:
@@ -247,7 +247,7 @@ def choice_two():
             continue
     time.sleep(2)
     print("What is that? Is that an ... ")
-    alien = "ALIEN!!!"
+    alien = Fore.MAGENTA + "ALIEN!!!"
     for character in alien:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -261,7 +261,7 @@ def choice_two():
             time.sleep(2)
             print("The alien is running towards you, he is attacking you!")
             time.sleep(3)
-            print("GAME OVER!\n")
+            print(Fore.RED + "GAME OVER!\n")
             play_again()
             break
         elif choice_three == "run":
@@ -269,7 +269,7 @@ def choice_two():
             time.sleep(2)
             print("HE COUGHT YOU!!!!")
             time.sleep(2)
-            print("GAME OVER!\n")
+            print(Fore.RED + "GAME OVER!\n")
             play_again()
             break
         elif choice_three == "hide":
@@ -288,7 +288,7 @@ def crew_assist():
     The game continues where the user will be exposeed to new challenges
     and he will be requested to choose different options.
     """
-    oxigen_tank = "The oxygen tank is down to 50%."
+    oxigen_tank = Fore.YELLOW + "The oxygen tank is down to 50%."
     for character in oxigen_tank:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -306,7 +306,7 @@ def crew_assist():
             print("Something has damaged your suit. " +
                   "You start loosing your conscience.")
             time.sleep(3)
-            print("GAME OVER!\n")
+            print(Fore.RED + "GAME OVER!\n")
             play_again()
             break
         elif choose_your_next_move == "continue":
@@ -328,8 +328,8 @@ def do_research():
     print("While continue researching, you noticed that you are running low " +
           "on the oxygen tanks. 25% it's what you see on the watch.")
     time.sleep(2)
-    radio_string = "RADIO: Crew member: Chhh chhh ... he hit me!\n"
-    for character in radio_string:
+    radio_str = Fore.YELLOW + "RADIO: Crew member: Chhh chhh ... he hit me!\n"
+    for character in radio_str:
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.3)
@@ -346,7 +346,7 @@ def do_research():
             print("You are brave! Continuing researching is " +
                   "important for you!")
             time.sleep(2)
-            research = "RESERCHING ..."
+            research = Fore.YELLOW + "RESERCHING ..."
             for character in research:
                 sys.stdout.write(character)
                 sys.stdout.flush()
@@ -354,7 +354,7 @@ def do_research():
             time.sleep(2)
             print("You have just 2% oxygen left, you start seeing unclear..")
             time.sleep(3)
-            print("GAME OVER!\n")
+            print(Fore.RED + "GAME OVER!\n")
             play_again()
             break
         else:
@@ -397,7 +397,7 @@ def returning_to_the_spaceship():
                 time.sleep(2)
                 print("He is running toward you pointing his gun at you!")
                 time.sleep(3)
-                print("\nGAME OVER!")
+                print(Fore.RED + "\nGAME OVER!")
                 play_again()
                 break
             elif your_chance == 2:
@@ -437,24 +437,24 @@ def back_to_earth():
         if spaceship_repair == "fly":
             print("Your instincts are strong, you can do it!")
             time.sleep(3)
-            danger = "DANGER! DANGER! DANGER!\n"
+            danger = Fore.RED + "DANGER! DANGER! DANGER!\n"
             for character in danger:
                 sys.stdout.write(character)
                 sys.stdout.flush()
                 time.sleep(0.1)
             time.sleep(2)
             print("The ship has serios damage!")
-            mayday = "Mayday! Mayday! Mayday\n"
+            mayday = Fore.MAGENTA + "Mayday! Mayday! Mayday\n"
             for character in mayday:
                 sys.stdout.write(character)
                 sys.stdout.flush()
                 time.sleep(0.2)
-            print("GAME OVER!\n")
+            print(Fore.RED + "GAME OVER!\n")
             play_again()
             break
         elif spaceship_repair == "repair":
             print("That's a good choice!")
-            repair = "REPAIRING ..."
+            repair = Fore.YELLOW + "REPAIRING ..."
             for character in repair:
                 sys.stdout.write(character)
                 sys.stdout.flush()
@@ -480,8 +480,9 @@ def home_sweet_home():
     print("\nThe alien you have brought back from the moon has been taken " +
           "by the scientists from Area 51! You are a hero!")
     time.sleep(2)
-    print("You have won the game! You are ready to be a real astronaut!")
-    print("Winner winner chicken dinner!")
+    print(Fore.GREEN + "You have won the game! You are ready " +
+          "to be a real astronaut!")
+    print(Fore.GREEN + "Winner winner chicken dinner!")
     while True:
         next_move = input("\nWhat will you do next?" +
                           "(leave/playagain): ").lower()
