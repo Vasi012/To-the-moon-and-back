@@ -1,6 +1,6 @@
 import sys
 import time
-from colorama import init, Fore
+from colorama import init, Fore, Back, Style
 init(autoreset=True)
 
 # Global Variables
@@ -99,7 +99,7 @@ def introduction():
     time.sleep(0.1)
     time.sleep(1)
     print("Starting to accommodate, the training looks easy, everything " +
-          "seems amazing, but I cannot wait for the first lunch, for " +
+          "seems amazing, but I cannot wait for the first launch, for " +
           "the first trip for .... the moon!")
     time.sleep(2)
     start_game()
@@ -150,7 +150,7 @@ def get_username():
         else:
             print(f'What a great name! Welcome to your life trip, {name}!')
             break
-    print("\nEverything is ready, prepare for lunch!")
+    print("\nEverything is ready, prepare for launch!")
     time.sleep(1)
     print("3")
     time.sleep(0.2)
@@ -160,15 +160,15 @@ def get_username():
     time.sleep(0.2)
     print("Go!")
     time.sleep(0.2)
-    print(f'The lunch has been successfull, {name}, ' +
+    print(f'The launch has been successfull, {name}, ' +
           'soon you will land on the moon!')
     time.sleep(3)
     print("\nPrepare to land!")
     while True:
         landing = input("\nPrepare to land, be careful to follow the " +
-                        "landing procedures as you have been trained." +
-                        "\nHave you followed the landing procedures?" +
-                        " (yes/no):").lower()
+                        "landing procedures as you have been trained. " +
+                        "\nHave you followed the landing procedures? " +
+                        "(yes/no):").lower()
         if landing == "no":
             print(Fore.RED + "\nDanger! Danger! Danger!")
             time.sleep(1)
@@ -181,7 +181,7 @@ def get_username():
             break
         elif landing == "yes":
             print("You have successfully followed the landing procedures!")
-            landing_string = Fore.YELLOW + "\nLanding ..."
+            landing_string = "\nLanding ..."
             for character in landing_string:
                 sys.stdout.write(character)
                 sys.stdout.flush()
@@ -196,7 +196,7 @@ def get_username():
                   'Keep in mind that you have 100% oxygen in your tank, ' +
                   'this will last approximative one hour.')
             time.sleep(2)
-            print("Don't forget to return to the base once you running" +
+            print("Don't forget to return to the base once you running " +
                   "low on oxygen.")
             choice_two()
             break
@@ -232,8 +232,8 @@ def choice_two():
                   "knows when you will need it.")
             break
         elif alien_gun == "no":
-            print("\nWhat you don't own, you don't take." +
-                  "let's hope you won't regret that later.")
+            print("\nWhat you don't own, you don't take. " +
+                  "Let's hope you won't regret that later.")
             time.sleep(2)
             print("The alien it's just behind you.")
             time.sleep(0.5)
@@ -247,7 +247,7 @@ def choice_two():
             continue
     time.sleep(2)
     print("What is that? Is that an ... ")
-    alien = Fore.MAGENTA + "ALIEN!!!"
+    alien = "ALIEN!!!"
     for character in alien:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -288,7 +288,7 @@ def crew_assist():
     The game continues where the user will be exposeed to new challenges
     and he will be requested to choose different options.
     """
-    oxigen_tank = Fore.YELLOW + "The oxygen tank is down to 50%."
+    oxigen_tank = "The oxygen tank is down to 50%."
     for character in oxigen_tank:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -328,7 +328,7 @@ def do_research():
     print("While continue researching, you noticed that you are running low " +
           "on the oxygen tanks. 25% it's what you see on the watch.")
     time.sleep(2)
-    radio_str = Fore.YELLOW + "RADIO: Crew member: Chhh chhh ... he hit me!\n"
+    radio_str = "RADIO: Crew member: Chhhhh chhhh ... he hit me!\n"
     for character in radio_str:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -336,7 +336,7 @@ def do_research():
     time.sleep(2)
     print("Your team member has been killed by an alien...")
     while True:
-        choice_four = input("What do you do next?" +
+        choice_four = input("What do you do next? " +
                             "(return/continue): ").lower()
         if choice_four == "return":
             print("You have just 25% oxygen left, you have to move fast!")
@@ -346,7 +346,7 @@ def do_research():
             print("You are brave! Continuing researching is " +
                   "important for you!")
             time.sleep(2)
-            research = Fore.YELLOW + "RESERCHING ..."
+            research = "RESERCHING ..."
             for character in research:
                 sys.stdout.write(character)
                 sys.stdout.flush()
@@ -379,16 +379,17 @@ def returning_to_the_spaceship():
     print("Do not be scared!")
     print("Choose one of the below option.")
     print("\n1. Hide yourself wishing that he won't see you.")
-    print("\n2. Kill the alien, and take his body with you to the spaceship.")
+    print("\n2. Kill the alien, and take his body with " +
+          "you to the spaceship.\n")
     if alien_gun == "yes":
         alien_text = "(1 or 2)"
     else:
         alien_text = "Please choose the option 1 or 2."
     while True:
         try:
-            your_chance = int(input('What do you do next?' +
-                                    'kill the alien with the gun ' +
-                                    'or hide until he will' +
+            your_chance = int(input('What do you do next? ' +
+                                    'Kill the alien with the gun ' +
+                                    'or hide until he will ' +
                                     f'leave? {alien_text}: '))
             if your_chance == 1:
                 print("That's a good choice, choosing safety is fine.")
@@ -406,12 +407,12 @@ def returning_to_the_spaceship():
                 time.sleep(3)
                 print("You hit him! He is dead!")
                 time.sleep(1)
-                print("You can now take his body to earth," +
+                print("You can now take his body to earth, " +
                       "this is a great discovery!")
                 time.sleep(2)
                 print("You might return to the spaceship now!")
                 time.sleep(4)
-                print("You have prepared the ship, you are ready to lunch!")
+                print("You have prepared the ship, you are ready to launch!")
                 back_to_earth()
                 break
             else:
@@ -437,14 +438,14 @@ def back_to_earth():
         if spaceship_repair == "fly":
             print("Your instincts are strong, you can do it!")
             time.sleep(3)
-            danger = Fore.RED + "DANGER! DANGER! DANGER!\n"
+            danger = "DANGER! DANGER! DANGER!\n"
             for character in danger:
                 sys.stdout.write(character)
                 sys.stdout.flush()
                 time.sleep(0.1)
             time.sleep(2)
-            print("The ship has serios damage!")
-            mayday = Fore.MAGENTA + "Mayday! Mayday! Mayday\n"
+            print("The ship has serios damage!\n")
+            mayday = "Mayday! Mayday! Mayday\n"
             for character in mayday:
                 sys.stdout.write(character)
                 sys.stdout.flush()
@@ -453,8 +454,8 @@ def back_to_earth():
             play_again()
             break
         elif spaceship_repair == "repair":
-            print("That's a good choice!")
-            repair = Fore.YELLOW + "REPAIRING ..."
+            print(Style.BRIGHT + "That's a good choice!")
+            repair = "REPAIRING ..."
             for character in repair:
                 sys.stdout.write(character)
                 sys.stdout.flush()
@@ -475,27 +476,27 @@ def home_sweet_home():
     """
     print("Well done, you have successfully returned home!")
     time.sleep(2)
-    print("Welcome back to earth!")
+    print(Back.GREEN + "Welcome back to earth!")
     time.sleep(1)
     print("\nThe alien you have brought back from the moon has been taken " +
           "by the scientists from Area 51! You are a hero!")
     time.sleep(2)
-    print(Fore.GREEN + "You have won the game! You are ready " +
+    print(Fore.GREEN + "You won the game! You are ready " +
           "to be a real astronaut!")
-    print(Fore.GREEN + "Winner winner chicken dinner!")
+    print(Fore.GREEN + "Winner winner, chicken dinner!")
     while True:
         next_move = input("\nWhat will you do next?" +
                           "(leave/playagain): ").lower()
         if next_move == "leave":
-            print("/nThank you for playing my game! Good bye!")
+            print("Thank you for playing my game! Good bye!")
             break
-        elif next_move == "PlayAgain":
+        elif next_move == "playagain":
             print("\nThat's a good choice, more training before " +
                   "the real thing!")
             play_again()
             break
         else:
-            print("\nPlease input a correct choice! (Leave/PlayAgain")
+            print("\nPlease input a correct choice! (Leave/PlayAgain)")
             continue
 
 
@@ -507,7 +508,7 @@ def play_again():
     a play game function is called again.
     """
     while True:
-        rplay_again = input("You can't die now! Try again? (yes/no): ").lower()
+        rplay_again = input("Are you ready to try again? (yes/no): ").lower()
         if rplay_again == "yes":
             introduction()
             break
