@@ -100,7 +100,7 @@ def introduction():
     time.sleep(1)
     print("Starting to accommodate, the training looks easy, everything " +
           "seems amazing, but I cannot wait for the first launch, for " +
-          "the first trip for .... the moon!")
+          "the first trip to .... the moon!")
     time.sleep(2)
     start_game()
 
