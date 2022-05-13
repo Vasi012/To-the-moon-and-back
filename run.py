@@ -1,5 +1,6 @@
 import sys
 import time
+import pyfiglet
 from colorama import init, Fore, Back, Style
 init(autoreset=True)
 
@@ -13,13 +14,22 @@ def introduction():
     """
     Display the story line, title, and introduce the user into the game.
     """
-    print("All the struggle and the past years, it all " +
+    print("Welcome to the moon and back game, " +
+          "this game is a fiction game, where you " +
+          "will be exposed to different challenges, " +
+          "all starting from the idea of traveling to "
+          "the moon. \nThroughout the game you will need " +
+          "to input answers in order to pass to the next " +
+          "challenge, bear in mind that you have just one " +
+          "chance to win! Enjoy and have fun!")
+    time.sleep(4)
+    print("\n\nAll the struggle and the past years, it all " +
           "been a success. ")
-    print("All for achieving the dream of my life.")
-    time.sleep(1)
+    print("\nAll for achieving the dream of my life.")
+    time.sleep(2)
     print("\nMom, Dad, I will be an astronaut! I will explore the " +
           "universe and I will see the galaxy!")
-    time.sleep(1)
+    time.sleep(2)
     print("\nIt's my time, I need to go, I have a long way ahead " +
           "all the training, and knowledge. Good bye Mom, Dad!")
     time.sleep(3)
@@ -27,7 +37,7 @@ def introduction():
           "\n\"That's one small step for man, one giant leap for mankind.\"")
     time.sleep(1)
     print("Wow... looks exactly as I've been dreaming about it! ")
-    time.sleep(2)
+    time.sleep(4)
     print(Fore.CYAN + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@@@@@@@@@@@@@@@@@@@@")
     time.sleep(0.1)
@@ -97,8 +107,8 @@ def introduction():
     print(Fore.CYAN + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@" +
           "@@@@@@@@@@@@@@@@@@@@@@@\n\n")
     time.sleep(0.1)
-    time.sleep(1)
-    print("Starting to accommodate, the training looks easy, everything " +
+    time.sleep(2)
+    print("\n\nStarting to accommodate, the training looks easy, everything " +
           "seems amazing, but I cannot wait for the first launch, for " +
           "the first trip to .... the moon!")
     time.sleep(2)
@@ -117,11 +127,12 @@ def start_game():
                             "journey to the moon! Are you ready for " +
                             "the lifetime journey?! (yes/no): ").lower()
         if to_the_moon == "no":
-            print("\n This was the one and only offer...")
+            print("\nThis was the one and only offer...")
             time.sleep(2)
-            print("But, It's your choice... Good luck!")
+            print("\nBut, It's your choice... Good luck!")
             time.sleep(3)
-            print(Fore.RED + "\nGame over!")
+            game_over = pyfiglet.figlet_format("Game Over", font="block")
+            print(Fore.RED + game_over)
             play_again()
             break
         elif to_the_moon == "yes":
@@ -138,7 +149,7 @@ def get_username():
     If no input, the user will be asked again to input his username.
     """
     print("\nGreat! You made a life decision!")
-    time.sleep(1)
+    time.sleep(2)
     print("We are proud to have you here today! Your name will be " +
           "all over the newspapers!")
     while True:
@@ -176,7 +187,8 @@ def get_username():
             time.sleep(1)
             print("You have crashed!")
             time.sleep(2)
-            print(Fore.RED + "Game over!\n")
+            game_over = pyfiglet.figlet_format("Game Over", font="block")
+            print(Fore.RED + game_over)
             play_again()
             break
         elif landing == "yes":
@@ -240,7 +252,8 @@ def choice_two():
             time.sleep(0.5)
             print("HE COUGHT YOU!!!!")
             time.sleep(0.5)
-            print(Fore.RED + "GAME OVER!\n")
+            game_over = pyfiglet.figlet_format("Game Over", font="block")
+            print(Fore.RED + game_over)
             play_again()
             break
         else:
@@ -271,7 +284,8 @@ def choice_of_three():
             time.sleep(2)
             print("The alien is running towards you, he is attacking you!")
             time.sleep(3)
-            print(Fore.RED + "GAME OVER!\n")
+            game_over = pyfiglet.figlet_format("Game Over", font="block")
+            print(Fore.RED + game_over)
             play_again()
             break
         elif choice_three == "run":
@@ -279,7 +293,8 @@ def choice_of_three():
             time.sleep(2)
             print("HE COUGHT YOU!!!!")
             time.sleep(2)
-            print(Fore.RED + "GAME OVER!\n")
+            game_over = pyfiglet.figlet_format("Game Over", font="block")
+            print(Fore.RED + game_over)
             play_again()
             break
         elif choice_three == "hide":
@@ -316,7 +331,8 @@ def crew_assist():
             print("Something has damaged your suit. " +
                   "You start loosing your conscience.")
             time.sleep(3)
-            print(Fore.RED + "GAME OVER!\n")
+            game_over = pyfiglet.figlet_format("Game Over", font="block")
+            print(Fore.RED + game_over)
             play_again()
             break
         elif choose_your_next_move == "continue":
@@ -364,7 +380,8 @@ def do_research():
             time.sleep(2)
             print("You have just 2% oxygen left, you start seeing unclear..")
             time.sleep(3)
-            print(Fore.RED + "GAME OVER!\n")
+            game_over = pyfiglet.figlet_format("Game Over", font="block")
+            print(Fore.RED + game_over)
             play_again()
             break
         else:
@@ -408,7 +425,8 @@ def returning_to_the_spaceship():
                 time.sleep(2)
                 print("He is running toward you pointing his gun at you!")
                 time.sleep(3)
-                print(Fore.RED + "\nGAME OVER!")
+                game_over = pyfiglet.figlet_format("Game Over", font="block")
+                print(Fore.RED + game_over)
                 play_again()
                 break
             elif your_chance == 2:
@@ -460,7 +478,8 @@ def back_to_earth():
                 sys.stdout.write(character)
                 sys.stdout.flush()
                 time.sleep(0.2)
-            print(Fore.RED + "GAME OVER!\n")
+            game_over = pyfiglet.figlet_format("Game Over", font="block")
+            print(Fore.RED + game_over)
             play_again()
             break
         elif spaceship_repair == "repair":
@@ -489,9 +508,12 @@ def home_sweet_home():
     print(Back.GREEN + "Welcome back to earth!")
     time.sleep(1)
     print("\nThe alien you have brought back from the moon has been taken " +
-          "by the scientists from Area 51! You are a hero!")
-    time.sleep(2)
-    print(Fore.GREEN + "You won the game! You are ready " +
+          "by the scientists from Area 51! You are a hero!\n\n")
+    time.sleep(3)
+    win = pyfiglet.figlet_format("WINNER", font="smisome1")
+    print(Fore.RED + win)
+    time.sleep(1)
+    print(Fore.GREEN + "\nYou are ready " +
           "to be a real astronaut!")
     print(Fore.GREEN + "Winner winner, chicken dinner!")
     while True:

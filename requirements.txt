@@ -1,2 +1,2 @@
-# Your requirements go here
 colorama==0.4.4
+pyfiglet==0.8.post1
