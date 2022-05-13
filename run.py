@@ -230,6 +230,7 @@ def choice_two():
         if alien_gun == "yes":
             print("\nYou have picked the gun. Who " +
                   "knows when you will need it.")
+            choice_of_three()
             break
         elif alien_gun == "no":
             print("\nWhat you don't own, you don't take. " +
@@ -246,6 +247,15 @@ def choice_two():
             print("That's not quite right, please type 'yes' or 'no'.")
             continue
     time.sleep(2)
+
+
+def choice_of_three():
+    """
+    The user will be put in a situation where he has to choose what
+    he will do next, he will receive 3 different variants
+    where he can continue the game or lose.
+    He can choose just one of the below variants.
+    """
     print("What is that? Is that an ... ")
     alien = "ALIEN!!!"
     for character in alien:
