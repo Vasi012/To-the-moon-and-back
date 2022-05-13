@@ -123,8 +123,8 @@ def start_game():
     introduce the correct input.
     """
     while True:
-        to_the_moon = input("\nThe Chief has requested you to join a " +
-                            "journey to the moon! Are you ready for " +
+        to_the_moon = input("\nThe Chief engineer requested you to join a " +
+                            "mission to the moon! Are you ready for " +
                             "the lifetime journey?! (yes/no): ").lower()
         if to_the_moon == "no":
             print("\nThis was the one and only offer...")
