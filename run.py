@@ -511,7 +511,7 @@ def home_sweet_home():
           "by the scientists from Area 51! You are a hero!\n\n")
     time.sleep(3)
     win = pyfiglet.figlet_format("WINNER", font="smisome1")
-    print(Fore.RED + win)
+    print(Fore.GREEN + win)
     time.sleep(1)
     print(Fore.GREEN + "\nYou are ready " +
           "to be a real astronaut!")
