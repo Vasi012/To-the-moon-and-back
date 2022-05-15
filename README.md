@@ -1,7 +1,7 @@
 # To the moon and back
 
 ## Introduction
-To the moon and back is a browser-based game build in Python. It is based on a classic game of traveling and is themed loosely around traveling to the moon, researching it and returning to back to the earth. 
+To the moon and back is a browser-based game built in Python. The game is based on a classic game of traveling to the moon, researching it and returning back to the earth. 
 As the game was developed in python for use in the terminal, it utilises the Code Institute Python Template to generate a “terminal” onto the page, making it available within a web browser.
 
 ![Screenshot 2022-05-14 154938](https://user-images.githubusercontent.com/96884287/168430861-01f6d8f4-b21b-4985-ba17-2655b6fbb7ce.png)
@@ -13,9 +13,9 @@ The game has been deployed via heroku and this can be found here. **(Add link of
 
 ## UX
 
-### The strategy Plane
+### The strategy plane
 
-To The Moon and Back, intended to be a fun game where the user has been selected to take part in a journey to the moon and back. 
+To The Moon and Back intends to be a fun game where the user has been selected to take part in a journey to the moon and back. 
 The adventure is starting right when the user will run the terminal. 
 This type of game can be played for short or medium periods of time, as the user has the chance to train a longer period before getting the chance in real life to travel to the moon.
 Given the limitations of the terminal-based interface, care will need to be taken to incorporate visual stimulus, along with an engaging narrative to convey an element of fun to the user.
@@ -33,16 +33,16 @@ Given the limitations of the terminal-based interface, care will need to be take
 -	As a user I want to be able to control the amount of time it takes to play the game.
 -	As a user I enjoy challenges and keeping in mind that there is just a chance to win this can be very challenging sometimes. 
 
-## The scope Plane
+## The scope plane
 
 ### Features planned
 
--	As there are certain restrictions in the scope of the development of the application, such as the terminal confines and methods of deployment. It will be important to ensure all functionality is contained within the game terminal screen.
--	Despite the confines of the terminal emulator, the site should site be visually stimulating and clear to the user that it is a game.
--	The game has just one chance to be one and this has been implemented to challenge to user to play the game, offering him a feeling of victory at the end of the game when this will win.
+-	As there are certain restrictions in the scope of the development of the application, such as the terminal confines and methods of deployment it will be important to ensure all functionality is contained within the game terminal screen.
+-	Despite the confines of the terminal emulator, the site should be visually stimulating and clear to the user that it is a game.
+-	The game has just one chance to be won and this has been implemented to challenge the user to play the game, offering him a feeling of victory at the end of the game when the user will win.
 
 
-## The structure Plane
+## The structure plane
 
 ### User story:
 
@@ -50,11 +50,11 @@ As a user, I want a fun and simple game to play.
 
 Acceptance Criteria:
 
--	It should be clear to the user that this is a game, what it is about and how to play.
+-	It should be clear to the user that this is a game what it is about and how to play.
 
 Implementation:
 
--	The layout, use of colour and in game narrative will all be designed to immerse the user into the game world. Conveying a sense of fun to the user throughout the interactions with the game. Instructions on how to play will be available at the start of the game, along with clear prompts and validation for each user input.
+-	The layout, use of colour and game narrative will all be designed to immerse the user into the game world. Conveying a sense of fun to the user throughout the interactions with the game. Instructions on how to play will be available at the start of the game, along with clear prompts and validation for each user input.
 
 
 ### User story:
@@ -71,7 +71,7 @@ Implementation:
 
 ### User story: 
 
-As a user I enjoy challenges and keeping in mind that there is just a chance to win this can be very challenging sometimes.
+As a user I enjoy challenges and keeping in mind that, there is just a chance to win and this can be very challenging.
 
 Acceptance Criteria:
 
@@ -82,16 +82,16 @@ Implementation:
 -	The user will be challenged to play this game until he will win, the game is very simple, and the idea of this game is to challenge the user directly, offering him only one chance to win the game and multiple chances to lose. 
 
 
-**Opportunities**                        |                 *Importance*         |        *Viability / Feasibility*
-“Provide a fun game environment          |                      5               |                  5
-“Provide a challenging game              |                      5               |                  5
+**Opportunities**                         |                 *Importance*         |        *Viability / Feasibility*
+"Provide a fun game environment"          |                      5               |                  5
+"Provide a challenging game"              |                      5               |                  5
 
 
 ## The skeleton planes
 
 ### Wireframe mock-up
 
-Given that the application will be run within a terminal emulator provided within the template, there are limited options available with regards to the layout of the webpage itself. And I decided to leave simple and elegant. 
+Given that the application will be run within a terminal emulator provided within the template, there are limited options available with regards to the layout of the webpage itself. And I decided to leave it simple and elegant. 
 
 
 ![Screenshot 2022-05-14 160400](https://user-images.githubusercontent.com/96884287/168432485-874d8278-fb46-4e88-b7fc-efb8d586638c.png)
@@ -129,11 +129,11 @@ Immediately after the story line, the game will begin asking for the user input,
 
 Throughout the game
 
-The user will be exposed to different situations where his input will be required to fallow the flow of the story. In this part of the game, the user can lose the game very quickly or win it. Now depends on their instincts.
+The user will be exposed to different situations where his input will be required to follow the flow of the story. In this part of the game, the user can lose the game very quickly. Now depends on their instincts.
 
 End Game Screen
 
-Once the user (or the AI) has completed with success the game, they can see a message ‘’Winner’’ showed up on the screen, if the user loses the game, the ‘’Game Over’’ message will be on the screen and they will requested the user input to try again or leave the game. 
+Once the user (or the AI) has completed with success the game, they can see a message ‘’Winner’’ showed up on the screen, if the user loses the game, the ‘’Game Over’’ message will be on the screen. The function play_again(), will requested the user input to try again or leave the game. 
 
 -	Winner
 
@@ -194,7 +194,7 @@ Conclusion: This function and all its elements work as expected and no bugs appe
 
 4.	Testing choice_two()
 
-In this function, the user is asked whether they would like to pick up a gun they find in on the surface of the moon. ("Do you take the gun? (yes/no): ").                                                                                                                                                                                                     
+In this function, the user is asked whether they would like to pick up a gun they find on the surface of the moon. ("Do you take the gun? (yes/no): ").                                                                                                                                                                                                     
 When I typed "yes", the game moved to the next part of the story, choice_of_three(), as expected.
 When I typed "no", the game ended with the alien coughing the user, as expected.
 
@@ -233,7 +233,7 @@ Conclusion: This function and all its elements work as expected and no bugs appe
 
 7.	Testing do_research()
 
-Whilst the user is conducting its research on the surface of the moon, the crew mate meets an alien and he is killed, immediately after, the user is informed and he has to choose what he will do next, he can choose if he will continue his research or he will return back to the spaceship, in order to create more suspense the user will be informed that he has just 25% oxygen left.  The user will need to choose what he will do next, returning to the spaceship or continue its research. 
+Whilst the user is conducting its research on the surface of the moon, the crew mate meets an alien and he is killed, immediately after, the user is informed and he has to choose what he will do next, he can choose to continue his research or he will return back to the spaceship, in order to create more suspense the user will be informed that he has just 25% oxygen left. The user will need to choose what he will do next, returning to the spaceship or continue its research. 
 
 If the user will choose to continue, an appreciation message will be showed and he will continue researching until his oxygen is running out and he is falling down unconsciously and he die, a message saying game over will be presented and the play_again function will ask the user if he will like to try again. 
 
@@ -247,7 +247,7 @@ Conclusion: This function and all its elements work as expected and no bugs appe
 
 8.	Testing returning_to_the_spaceship(): 
 
-When this function is called, the player encounters an alien and is presented with two different options of what they can do in order to try to survive the encounter. 
+When this function is called, the player encounters an alien and is presented with two different options of what they can do to survive the encounter. 
 
 The first option is to hide from this creature and try to protect himself. The second option is to kill the alien and take his body back to earth. The user can use the gun found previously on the moon surface to kill the alien. To test this is true, I have started the game again. Once I encountered the alien, I expected to see 2 choices and I did, meaning the code works properly. After making sure the proper choices appear, I than proceeded with testing the code: When I chose "1" (hide yourself), the game led to a Game Over scenario and the play_again() function was called as expected, allowing me to start again. When I chose "2" (Kill the alien), function back_to_earth() was called as expected. 
 
@@ -295,7 +295,7 @@ Conclusion: This function and all its elements work as expected and no bugs appe
 ## Validator Testing
 
 pep8online.com - I utilised pep8online.com to validate my python code. All python files were checked with no errors reported.
-Screenshots of the validator reports are here:
+Screenshot of the validator report is here:
 
 ![Screenshot 2022-05-14 155018](https://user-images.githubusercontent.com/96884287/168434866-56f56d04-4a82-46fa-b5ae-6f248d0f63c7.png)
 
