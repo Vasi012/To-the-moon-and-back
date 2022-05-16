@@ -7,7 +7,7 @@ As the game was developed in python for use in the terminal, it utilises the Cod
 ![Screenshot 2022-05-14 154938](https://user-images.githubusercontent.com/96884287/168430861-01f6d8f4-b21b-4985-ba17-2655b6fbb7ce.png)
 
 
-The game has been deployed via heroku and this can be found here. **(Add link of deployed game)**
+The game has been deployed via heroku and this can be found here. https://to-the-moon-and-back2.herokuapp.com/
 
 *Please note: To open any links in this document in a new browser tab, please press CTRL + Click.*
 
@@ -82,9 +82,15 @@ Implementation:
 -	The user will be challenged to play this game until he will win, the game is very simple, and the idea of this game is to challenge the user directly, offering him only one chance to win the game and multiple chances to lose. 
 
 
-**Opportunities**                         |                 *Importance*         |        *Viability / Feasibility*
-"Provide a fun game environment"          |                      5               |                  5
-"Provide a challenging game"              |                      5               |                  5
+**Opportunities** 
+
+"Provide a fun game environment" 
+ |*Importance*|*Viability / Feasibility*|
+ | 5 | 5 |
+ 
+"Provide a challenging game"       
+ |*Importance*|*Viability / Feasibility*|
+| 5 | 5 |
 
 
 ## The skeleton planes
@@ -301,30 +307,30 @@ Screenshot of the validator report is here:
 
 
 
-## Libraries Utilised
+## Technologies Utilised
 
 
-Built in Python Libraries
+- Built in Python Libraries
 
-Several of the built-in python libraries were utilised to enable additional functionality within the application.
+- Several of the built-in python libraries were utilised to enable additional functionality within the application.
 
-Python was used as the programming language to make the game.
+- Python was used as the programming language to make the game.
 
-LucidChart was used to create the flow chart showing the game's logic.
+- LucidChart was used to create the flow chart showing the game's logic.
 
-GitHub has been used to store the code, images, and other content.
+- GitHub has been used to store the code, images, and other content.
 
-Heroku was used to deploy the game to the web.
+- Heroku was used to deploy the game to the web.
 
-Git was used to track changes made to the project and to commit and push code to the repository.
+- Git was used to track changes made to the project and to commit and push code to the repository.
 
-Python module time has been used to allow for a delay between lines of text displaying.
+- Python module time has been used to allow for a delay between lines of text displaying.
 
-Python module sys has been used to print a string of text character by character instead of all at one.
+- Python module sys has been used to print a string of text character by character instead of all at one.
 
-Colorama has been used to add a colour to the output in the terminal to create an effect of difference to the user.
+- Colorama has been used to add a colour to the output in the terminal to create an effect of difference to the user.
 
-Pyfiglet has been used to add a different text to the ‘game over’ and ‘winner’ so the user distinguishes the winning or game over message from the other text. 
+- Pyfiglet has been used to add a different text to the ‘game over’ and ‘winner’ so the user distinguishes the winning or game over message from the other text. 
 
 
 ## Deployment
@@ -359,19 +365,13 @@ Then repeat the steps to add a node.js build pack.
 
 The order of the build packs is important, in the list Python should be first with Node.js second. If they are not in this order, you can click and drag them to rearrange.
 
-Next navigate back to the deploy tab using the submenu at the top of the page.
+Return to the GitPod, and type in the terminal the following commands:
 
-In the deployment method section select the GitHub - Connect to GitHub button and follow the steps prompted if any to connect your GitHub account
-
-In the Connect to GitHub section that appears, select the correct account, and enter the name of the repository and select search.
-
-Once Heroku has located the repo select connect.
-
-This will connect the repo to the app within Heroku. Below the Apps Connected to Heroku section will be the Automatic Deploys section.
-
-In this section, confirm the correct branch of the repo is selected in the drop-down box, and then click the Enable Automatic Deploys button
-
-This will ensure whenever you change something in the repo and push the changes to GitHub, Heroku will rebuild the app. If you prefer to do this manually you can utilise the manual deployment options further down. For this project I utilised the Automatic Deployment to enable me to check changes I made to the app as I developed it.
+1. You will need to type Heroku login -i, and the app will ask for your email address and after for the password.
+2. Once logged in you will need to type Heroku apps and press enter.
+3. your project will be showed below this and you will need to type Heroku git:remote -a <app_name> in this case will be to-the-moon-and-back2. 
+4. The next command that you will need to insert in the terminal is: git add . && git commit -m "Deploy to Heroku via CLI"
+5. Once the branch will be UpToDate you will need to type git push Heroku main.
 
 Heroku will now build the app for you. Once it has completed the build process you will see a 'Your App Was Successfully Deployed' message and a link to the app to visit the live site.
 
@@ -382,13 +382,15 @@ The mock terminal used to host the game has been created by [Code institute.](ht
 
 The code is custom and written entirely by me and the story is of my own idea.
 
-Pyfiglet has been installed and used from [here.] (https://pypi.org/project/pyfiglet/0.7/)
+Pyfiglet has been installed and used from [here.](https://pypi.org/project/pyfiglet/0.7/)
 
 Colorama has been installed and used as instructed from [here.](https://pypi.org/project/colorama/)
 
 The game logo has been created by me in a Notepad file. 
 
 The sys and time functions have been used as instructed in [here](https://www.programiz.com/python-programming/time/sleep)
+
+The deployment of the project has been realised after following the steps found on slack [Click Here](https://code-institute-room.slack.com/archives/D02T4R10QP8/p1651856379084749)
 
 
 
